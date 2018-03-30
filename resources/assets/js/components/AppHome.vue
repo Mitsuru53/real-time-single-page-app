@@ -11,9 +11,10 @@
 import toolbar from './Toolbar.vue';
 import AppFooter from './AppFooter.vue';
 import Login from './login/Login.vue';
+import Signup from './login/Signup.vue';
 
 export default {
-  components: {toolbar, AppFooter,Login}
+  components: {toolbar, AppFooter,Login, Signup}
 }
 </script>
 
