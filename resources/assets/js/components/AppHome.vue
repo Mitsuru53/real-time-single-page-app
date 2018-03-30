@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="">
     <toolbar></toolbar>
+    <router-view></router-view>
     <app-footer></app-footer>
   </div>
 </template>
@@ -9,9 +10,10 @@
 
 import toolbar from './Toolbar.vue';
 import AppFooter from './AppFooter.vue';
+import Login from './login/Login.vue';
 
 export default {
-  components: {toolbar, AppFooter}
+  components: {toolbar, AppFooter,Login}
 }
 </script>
 
