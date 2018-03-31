@@ -3,6 +3,7 @@
     <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
     <v-toolbar-title>Laravel</v-toolbar-title>
     <v-spacer></v-spacer>
+    <app-notification v-if="loggedIn"></app-notification>
     <div class="hidden-sm-and-down">
       <router-link
         v-for="item in items"
@@ -16,9 +17,12 @@
 </template>
 
 <script>
+import AppNotification from './AppNotification';
 export default {
+  components:{AppNotification},
   data(){
     return {
+      loggedIn: User.loggedin(),
       items: [
         {'title': 'Forum', to: '/forum', show: true},
         {'title': 'Ask Question', to: '/ask', show: User.loggedin()},
