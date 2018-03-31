@@ -8,6 +8,9 @@
          :data=question
         ></question>
       </v-flex>
+      <v-flex xs4>
+        <app-sidebar></app-sidebar>
+      </v-flex>
       sidebar
     </v-layout>
   </v-container>
@@ -15,8 +18,9 @@
 
 <script>
 import question from './question.vue';
+import AppSidebar from './AppSidebar';
 export default {
-  components:{question},
+  components:{question, AppSidebar},
   data(){
     return {
       questions: {}
